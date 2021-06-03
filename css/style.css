@@ -1,0 +1,213 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+}
+.background-image{
+    background-image: url('https://upload.cc/i1/2021/05/28/bNf8B0.png');
+    height: 380px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 120px;
+}
+.background-image h1{
+    font-size: 30px;
+    padding: 90px;
+    color: white;
+}
+.district-select{
+    width: 400px;
+    height: 40px;
+    background: rgba(255,255,255,0.7);
+    border: 3px solid #FFFFFF;
+    border-radius: 3px;
+    margin-bottom: 100px;
+}
+.popular-district{
+    width: 800px;
+    height: 112px;
+    background-color: white;
+    padding: 0px 20px;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+}
+.popular-district h2{
+    float: left;
+    padding: 20px 10px;
+}
+.popular-district ul{
+    display: flex;
+    justify-content: flex-start;
+    clear: both;
+}
+.popular-district li{
+    border-radius: 5px;
+    margin: 0px 20px;
+}
+.popular-district a{
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 11px 34px;
+
+}
+.popular-district-1{
+    background: #8A82CC;
+}
+.popular-district-2{
+    background: #FFA782;
+}
+.popular-district-3{
+    background: #F5D005;
+}
+.popular-district-4{
+    background: #559AC8;
+}
+.viewpoint{
+    position: relative;
+}
+.viewpoint hr{
+    width: 900px;
+    border: 1px dashed #559AC8;
+}
+.viewpoint .fa-sort-down{
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    color: #559AC8;
+    border: 1px solid #559AC8;
+    padding: 2px 5px 6px 5px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+
+}
+.list-box{
+    width: 450px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    margin: 25px 16px;
+}
+.list-box ul{
+    margin: 5px 15px;
+}
+.list-box li{
+    font-size: 15px;
+    padding: 8px;
+}
+.list-img{
+    width: 450px;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.list-img h3, h4{
+    padding: 10px;
+}
+.list-img h4{
+    font-size: 13px;
+}
+.list-detail li, .list-tag{
+    font-family: '微軟正黑體';
+    font-weight: normal;
+}
+.list-detail i{
+    padding-right: 8px;
+}
+.list-detail{
+    position: relative;
+}
+.fa-clock{
+    color: #8A82CC;
+}
+.fa-map-marker-alt{
+    color: #e7872c;
+}
+.fa-mobile-alt{
+    color: #559AC8;
+}
+.fa-tag{
+    color: #F5D005;
+}
+.list-detail .list-tag{
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+    padding: 8px;
+}
+.viewpointList{
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.viewpoint h2{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 40px;
+    color: #8A82CC;
+}
+
+
