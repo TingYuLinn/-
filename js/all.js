@@ -1461,9 +1461,21 @@ var allDistrictOption = document.querySelector('.district-select');
 var viewpointList = document.querySelector('.viewpointList');
 var hotZone = document.querySelector('.popular-district');
 var title = document.querySelector('.viewpoint h2');
+setListContent();
 
-allDistrictOption.addEventListener('change',setListContent);
-hotZone.addEventListener('click',setHotZoneContent);
+
+allDistrictOption.addEventListener('change', function(e) {
+    let select = e.target.value;
+    title.innerHTML = select;
+    setListContent(select);
+  });
+hotZone.addEventListener('click',function(e){
+    console.log(e.target.value);
+    if(e.target.nodeName !== 'INPUT'){return}
+    let select = e.target.value;
+    title.innerHTML = select;
+    setListContent(select);
+});
 
 
 
@@ -1481,9 +1493,8 @@ function addOption() {
 addOption();
 
 //首頁全部景點
-function setListContent(e) {
+function setListContent(select = 'all') {
     var str = '';
-    var select = e.target.value;
     for (var i = 0; i < openData.length; i++) {
             str +=
             '<li class="list-box">'+
@@ -1500,15 +1511,8 @@ function setListContent(e) {
             '</li>'
             if(select == openData[i].Zone){
                 viewpointList.innerHTML = str;
-                title.innerHTML = select;
-            }else if(select == '全部地區'){
+            }else if(select == 'all'){
                 viewpointList.innerHTML = str;
-                title.innerHTML = select;
             }
     }
-}
-//判斷是否為按鈕，再執行setListContent
-function setHotZoneContent(e){
-    if(e.target.nodeName !=='A'){return;}
-    setListContent();
 }

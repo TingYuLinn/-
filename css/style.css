@@ -91,21 +91,21 @@ table {
     float: left;
     padding: 20px 10px;
 }
-.popular-district ul{
+.popular-district div{
     display: flex;
     justify-content: flex-start;
     clear: both;
 }
-.popular-district li{
+.popular-district input{
+    border: none;
     border-radius: 5px;
     margin: 0px 20px;
-}
-.popular-district a{
-    display: block;
     color: #FFFFFF;
-    text-decoration: none;
     padding: 11px 34px;
-
+}
+.popular-district input:hover{
+    background-color: crimson;
+    color: black;
 }
 .popular-district-1{
     background: #8A82CC;
