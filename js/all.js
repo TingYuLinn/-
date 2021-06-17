@@ -1,3 +1,4 @@
+//使用xhr撈資料
 let openData = '';
 function getData(){
     let xhr = new XMLHttpRequest();
@@ -16,21 +17,20 @@ function init(){
 }
 init();
 
-
+//DOM
 let allDistrictOption = document.querySelector('.district-select');
 let viewpointList = document.querySelector('.viewpointList');
 let hotZone = document.querySelector('.popular-district');
 let title = document.querySelector('.viewpoint h2');
 
 
-
+//監聽事件
 allDistrictOption.addEventListener('change', function(e) {
     let select = e.target.value;
     title.innerHTML = select;
     setListContent(select);
   });
 hotZone.addEventListener('click',function(e){
-    console.log(e.target.value);
     if(e.target.nodeName !== 'INPUT'){return}
     let select = e.target.value;
     title.innerHTML = select;
@@ -39,7 +39,7 @@ hotZone.addEventListener('click',function(e){
 
 
 
-//撈Zone的資料放進select選項
+//撈地區資料放進select選項
 function addOption() {
     let set = new Set();
     let result = openData.filter(item => !set.has(item.Zone) ? set.add(item.Zone) : false);
@@ -47,15 +47,13 @@ function addOption() {
     for (let i = 0; i < result.length; i++) {
         str += '<option value="' + result[i].Zone + '">' + result[i].Zone + '</option>';
     }
-    // console.log(str);
     allDistrictOption.innerHTML = '<option value="請選擇行政區" selected disabled>--請選擇行政區--</option>' + str;
 }
 addOption();
 
-//首頁全部景點
+//顯示景點
 function setListContent(select) {
     let ary = openData;
-    console.log(ary);
     let str = '';
     for (let i = 0; i < ary.length; i++) {
         if(select == ary[i].Zone){
