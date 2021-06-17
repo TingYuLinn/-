@@ -199,7 +199,6 @@ table {
 .viewpointList{
     width: 1000px;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -209,5 +208,16 @@ table {
     padding-top: 40px;
     color: #8A82CC;
 }
-
+.footer{
+    height: 100px;
+    background-color: #559AC8;
+    text-align: center;
+}
+.footer-name{
+    color: white;
+    padding: 20px 20px;
+}
+.footer-source{
+    color: #F5D005;
+}
 
